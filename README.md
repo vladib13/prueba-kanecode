@@ -1,4 +1,4 @@
-# prueba-kanecode
+# prueba-kanecode Vladimir Blanco
 
 Think: Component Driven Design.
 
