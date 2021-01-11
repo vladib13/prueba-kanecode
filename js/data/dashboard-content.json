@@ -1,0 +1,57 @@
+{
+  "cursos_activos": "08",
+  "nuevas_oportunidades": 123,
+  "certificados_entregados": 20,
+  "estudiantes": {
+    "registrados": 45,
+    "activos": 14,
+    "inactivos": 22
+  },
+  "agenda_eventos": {
+    "mes": "nov",
+    "dia": 23,
+    "evento_principal": "Curso de fotografía de alimentos",
+    "evento_secundario": "Calificar actividad del módulo 2"
+  },
+  "usuario": {
+    "nombre": "Liliana",
+    "apellido": "Mora",
+    "notificaciones": 3,
+    "mensajes": 3
+  },
+  "ganancias_reportadas": {
+    "ganancias_totales": "$ 5863",
+    "ganancias_mensuales": [
+      {"octubre": {
+        "nuevos": 60,
+        "recurrentes": 40,
+        "monto": "$629.75"
+      }},
+      {"noviembre": {
+        "nuevos": 21,
+        "recurrentes": 15,
+        "monto": "$270.18"
+      }},
+      {"diciembre": {
+        "nuevos": 46,
+        "recurrentes": 39,
+        "monto": "$485.35"
+      }},
+      {"enero": {
+        "nuevos": 36,
+        "recurrentes": 29,
+        "monto": "$482.53"
+      }},
+      {"febrero": {
+        "nuevos": 44,
+        "recurrentes": 38,
+        "monto": "$323.61"
+      }},
+      {"marzo": {
+        "nuevos": 38,
+        "recurrentes": 50,
+        "monto": "704.15"
+      }}
+    ]
+  }
+}

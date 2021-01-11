@@ -1,0 +1,180 @@
+.section-sidebar {
+  background-color: $color-light-primary;
+  grid-area: sidebar;
+  padding: 3.9rem 2rem 2rem;
+
+  &.sidebar__collapsed {
+    padding-top: 1.9rem;
+    .sidebar {
+      grid-template-rows: 10rem repeat(6, 5.6rem) 1fr 5.6rem;
+      &__label, &__logo--hidden-on-collapse {
+        display: none;
+      }
+      &__logo {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      &__text {
+        text-align: center;
+      }
+  
+      &__header {
+        padding: 0;
+        margin-bottom: 0;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      &__item {
+        padding: 1.8rem;
+      }
+
+      &__icon {
+        & i.sidebar__icon--expand {
+          height: 1.6rem;
+          width: 2rem;
+          display: block !important;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
+        &--collapse {
+          display: none !important;
+          background: none !important;
+        }
+
+        &--expand {
+          cursor: pointer;
+          background: url(../../img/Collapsed/collapse_alt.svg);
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 4.3rem repeat(6, 5.6rem) 1fr 5.6rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:  "_header" "item-1" "item-2" "item-3" "item-4" "item-5" "item-6" "space" "item-7";
+
+    &__header, &__item {
+      @include flex(row, flex-start, 100%);
+    }
+
+    &__header {
+      margin-bottom: 3.7rem;
+      grid-area: _header;
+    }
+
+    &__logo {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-left: 2.6rem;
+    }
+
+    &__label {
+      margin-left: 2rem;
+      font-weight: 500;
+      font-size: $font-size-default;
+      color: inherit;
+    }
+
+    &__space {
+      grid-area: space;
+    }
+
+    &__item {
+      padding: 1.8rem 1.4rem;
+      color: $color-dark-primary;
+      cursor: pointer;
+
+      &--active {
+        border-radius: 1.2rem;
+        background-color: $color-primary;
+        color: $color-light-primary;
+      }
+
+      &-1{
+        grid-area: item-1;
+      }
+      &-2{
+        grid-area: item-2;
+      }
+      &-3{
+        grid-area: item-3;
+      }
+      &-4{
+        grid-area: item-4;
+      }
+      &-5{
+        grid-area: item-5;
+      }
+      &-6{
+        grid-area: item-6;
+      }
+      &-7{
+        grid-area: item-7;
+      }
+    }
+
+    &__icon {
+      height: 2rem;
+      width: 2rem;
+
+      & i {
+        display: block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: inherit;
+        height: inherit;
+      }
+      
+      & i.sidebar__icon--expand {
+        display: none;
+      }
+
+      &--collapse {
+        cursor: pointer;
+        background: url(../../img/Home/collapse.svg);
+      }
+
+      &--expand {
+        display: none;
+        background: none;
+      } 
+
+      &--layout {
+        background: url(../../img/Home/layout.svg);
+      }
+      
+      &--document {
+        background: url(../../img/Home/contenido2.svg);
+      }
+
+      &--pencil {
+        background: url(../../img/Home/design3.svg);
+      }
+
+      &--database {
+        background: url(../../img/Home/database.svg);
+      }
+
+      &--rocket {
+        background: url(../../img/Home/lanzadera.svg);
+      }
+
+      &--charts {
+        background: url(../../img/Home/charts.svg);
+      }
+
+      &--control {
+        background: url(../../img/Home/settings-adjust.svg);
+      }
+    }
+  }
+}

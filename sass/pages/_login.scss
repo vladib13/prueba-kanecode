@@ -1,0 +1,9 @@
+.section-login {
+  @include centerHV;
+  @include flex(column, center, 100%);
+  width: 50.9rem;
+  .bottom-actions {
+    width: 100%;
+    @include gridEqual(2, 1, 2.1rem);
+  }
+}

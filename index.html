@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+    <title>Prendo - Login</title>
+</head>
+
+<!-- Login -->
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__start">
+            <div class="header__logo">
+                Prendo
+            </div>
+        </div>
+        <div class="header__end">
+            <div class="header__action">
+                <a href="home.html" target="_blank" class="btn btn--outline">
+                    Inicia gratis ahora
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Main -->
+    <main>
+        <!-- Login Section-->
+        <section class="section-login">
+            <form class="form">
+                <h2 class="heading-secondary u-center-text">
+                    Iniciar sesión
+                </h2>
+                <div class="form__group">
+                    <input id="email" type="text" class="form__input" placeholder="Correo electrónico" id="email" required>
+                    <label for="email" class="form__label">Correo electrónico</label>
+                    <small class="form__message">Disculpe, es obligatorio ingresar un correo válido.</small>
+                </div>
+                <div class="form__group form__group--password secret">
+                    <input type="checkbox" class="form__input--hidden" id="pass-toogle">
+                    <input id="password" type="password" class="form__input" placeholder="Contraseña" id="password" required>
+                    <label for="password" class="form__label">Contraseña</label>
+                    <small class="form__message">Disculpe, es obligatorio ingresar una contraseña (al menos 6 caracteres).</small>
+                </div>
+                <div class="form__row">
+                    <a href="#" class="action-link">¿Olvidaste tu contraseña?</a>
+                </div>
+                <div class="form__row">
+                    <a href="home.html" target="_blank" id="submit" class="btn btn--submit">
+                        Iniciar sesión
+                    </a>
+                </div>
+            </form>
+            <div class="u-separator">
+                <span class="text">o inicia sesión con</span>
+            </div>
+            <div class="bottom-actions">
+                <button class="btn btn--social">
+                    <span class="btn__icon"><i class="btn__icon--google"></i> Google</span>
+                </button>
+                <button class="btn btn--social">
+                    <span class="btn__icon"><i class="btn__icon--linkedin"></i> Linkedin</span>
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="js/vendor/jquery-3.5.1.min.js"></script>
+<script src="js/index.js"></script>
+
+</html>

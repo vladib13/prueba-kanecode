@@ -1,0 +1,82 @@
+.header {
+  @include flex(row, space-between, 100%);
+  padding: 1rem 2.2rem;
+
+  &__logo {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  &--light {
+    background-color: $color-light-primary;
+    grid-area: header;
+    padding: .938rem 3.165rem .962rem 3rem
+  }
+
+  &__end, &__dropdown {
+    @include flex(row, space-between, max-content);
+  }
+
+  &__action {
+    cursor: pointer;
+  }
+
+  &__photo {
+    margin-right: 1.9rem;
+  }
+
+  &__username {
+    margin-right: 1rem;
+    color: $color-grey-alt-3;
+    font-size: $font-size-default;
+    font-weight: 600;
+  }
+
+  &__dropdown {
+    &-icon {
+      // display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 1.36rem;
+      height: 0.778rem;
+      background: url(../../img/Home/arrow-down.svg);
+    }
+  }
+
+  &__icon {
+    width: 3.5rem;
+    height: 2.5rem;
+    margin-right: 3.75rem;
+    & i {
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: inherit;
+      height: inherit;
+    }
+    &--help {
+      background: url(../../img/Home/help.svg);
+    }
+    &--calendar {
+      background: url(../../img/Home/calendar.svg);
+    }
+
+    &--bell {
+      background: url(../../img/Home/campana.svg);
+    }
+
+    &--message {
+      position: relative;
+      background: url(../../img/Home/message.svg);
+      &::after {
+        top: 0;
+        right: .7rem;
+        position: absolute;
+        color: $color-light-alt-3;
+        content: '3';
+        font-size: $font-size-sm;
+        transform: rotate(-15deg);
+      }
+    }
+  }
+}

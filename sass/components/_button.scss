@@ -1,0 +1,88 @@
+.btn {
+  transition: all .2s;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: $font-size-default;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+  border: 1px solid $color-secondary;
+
+  &--submit {
+    & {
+      padding: 1.8rem 7rem;
+      border-radius: 2.8rem;
+      background-color: $color-primary;
+      color: $color-light-tertiary;
+      transition: all 1s;
+    }
+  
+    &:hover {
+      background-color: $color-alt-4;
+      transform: translateY(-3px);
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+  
+    &:active, &:focus {
+      outline: none;
+      // box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+      transform: translateY(-1px);
+    }
+  }
+
+  &--outline {
+    & {
+      padding: 1.3rem 3rem;
+      border-radius: 2.3rem;
+      background-color: transparent;
+      color: $color-secondary;
+      transition: all 1s;
+    }
+  
+    &:hover {
+      transform: translateY(-3px);
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+  
+    &:active, &:focus {
+      outline: none;
+      // box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+      transform: translateY(-1px);
+    }
+  }
+
+  &__icon {
+    color: $color-dark-alt;
+    @include flex(row, space-between, max-content);
+    & i {
+      width: 2.9rem;
+      height: 2.9rem;
+      margin-right: 2rem;
+    }
+
+    &--linkedin {
+      background: url(../../img/Login/linkedin_logo.svg);
+    }
+
+    &--google {
+      background: url(../../img/Login/google_logo.svg);
+    }
+  }
+
+  &--social {
+    border-color: $color-grey-secondary;
+    padding: 1.25rem 0 1.35rem 0;
+    background-color: $color-light-primary;
+    @include flex(row, center, 100%);
+    &:active, &:focus {
+      outline: none;
+    }
+  }
+}

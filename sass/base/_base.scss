@@ -1,0 +1,37 @@
+/* Basic Reset on Universal Selector */
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Root css */
+
+html {
+  // This is not about typography, this defines what 1rem is.
+  font-size: 62.5%; // 1rem = 10px
+
+  @include respond(tab-land) {
+    font-size: 46.35%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 41.2%;
+  }
+  
+  @include respond(big-desktop) {
+    font-size: 61.8%;
+  }
+}
+
+body {
+  // padding: 3rem;
+  box-sizing: border-box;
+  background-color: $color-light-secondary;
+  
+  @include respond(tab-port) {
+    padding: 0;
+  }
+
+}
